@@ -1,0 +1,8 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --background: #222222;
+  --text: var(--white);
+  --primary-color: #a84ba8;
+  --secondary-color: rgb(90, 127, 164);
+}
