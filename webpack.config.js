@@ -14,6 +14,7 @@ const jsEntries = {
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 
 const config = {
@@ -114,6 +115,20 @@ const jsConfig = Object.assign({}, config, {
     },
   },
 });
+
+const bsp = new BrowserSyncPlugin({
+  host: 'localhost',
+  port: 3000,
+  server: { baseDir: ['public'] },
+  files: [
+    'public/**/*.html', // Archivos a observar
+    'public/**/*.css',
+    'public/**/*.js',
+  ],
+});
+
+jsConfig.plugins = [bsp];
+cssConfig.plugins.push(bsp);
 
 
 module.exports = [jsConfig, cssConfig];
