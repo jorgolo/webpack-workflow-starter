@@ -7,7 +7,7 @@
     "dev": "webpack --watch --color --progress=profile --mode=development --devtool=eval-cheap-module-source-map",
     "prod": "webpack --mode=production"
   },
-  "author": "Jorge Rodriguez",
+  "author": "Jorge Mauricio Rodriguez Patiño",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.25.2",
